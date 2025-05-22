@@ -1,12 +1,14 @@
-inputtext = input('>')
+#converts the list of charatcers to a list of ascii binary
+def convListtoBin(inputList):
+    binarylist = []
+    for character in inputList:
+        binarylist.append(bin(ord(character)))
+    return binarylist
 
-inputlist = list(inputtext)
-inputBinList = []
+inputtext = input('input cipher text>')
 
-print(inputlist)
+print(convListtoBin(list(inputtext)))
 
-for character in inputlist:
-    inputBinList.append(bin(ord(character)))
+inputOneTimePad = input('input one time pad>')
 
-print(inputBinList)
-
+print(convListtoBin(list(inputOneTimePad)))
